@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC2B02E8-9F15-4AB8-9418-AE8486FE9A06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTestProject</RootNamespace>
+    <AssemblyName>UnitTestProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CredentialManagement, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CredentialManagement.1.0.2\lib\net35\CredentialManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.11.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.11.0\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAnalyticsTracker.Core, Version=4.6.7.0, Culture=neutral, PublicKeyToken=04ab204e84b117c0, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleAnalyticsTracker.Core.4.6.7\lib\portable45-net45+win8+wpa81\GoogleAnalyticsTracker.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAnalyticsTracker.Simple, Version=4.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleAnalyticsTracker.Simple.4.6.7\lib\portable45-net45+win8+wpa81\GoogleAnalyticsTracker.Simple.dll</HintPath>
+    </Reference>
+    <Reference Include="Harvester.Core, Version=2.1.1.0, Culture=neutral, PublicKeyToken=2335e074c59acad6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Harvester.Core.2.1.1.0\lib\net45\Harvester.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Harvester.Integration.NLog, Version=2.1.1.0, Culture=neutral, PublicKeyToken=2335e074c59acad6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Harvester.Integration.NLog.2.1.1.0\lib\net45\Harvester.Integration.NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expression.Blend.Sdk.WPF.1.0.1\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Sensors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.Sensors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.16.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.16.0\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross, Version=7.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.7.1.2\lib\net461\MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.5.6.3\lib\net45\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Wpf, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.5.6.3\lib\net45\MvvmCross.Binding.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.5.6.3\lib\net45\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.5.6.3\lib\net45\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.5.6.3\lib\net45\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.Wpf, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.5.6.3\lib\net45\MvvmCross.Platform.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Messenger.5.6.3\lib\net45\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Tests, Version=7.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Tests.7.1.2\lib\netstandard2.0\MvvmCross.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Wpf, Version=5.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.5.6.3\lib\net45\MvvmCross.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.10\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.5.231.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.5.231\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.1.11.121, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\net45\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_sqlcipher, Version=1.1.11.121, Culture=neutral, PublicKeyToken=83625171f3d0bf82, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_sqlcipher.1.1.11\lib\net45\SQLitePCLRaw.batteries_sqlcipher.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.1.11.121, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_sqlcipher.1.1.11\lib\net45\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.1.11.121, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.11\lib\net45\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.1.11.121, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.11\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlcipher, Version=1.1.11.121, Culture=neutral, PublicKeyToken=7bbc99275c710061, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlcipher.net45.1.1.11\lib\net45\SQLitePCLRaw.provider.sqlcipher.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expression.Blend.Sdk.WPF.1.0.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="VisionHealth.Authentication.Models, Version=2.0.0.1014, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Authentication.2.0.1014\lib\portable-net45+netcore45+wpa81\VisionHealth.Authentication.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Analytics, Version=2.0.0.26, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Analytics.2.0.26\lib\net45\VisionHealth.Component.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Authentication, Version=2.0.0.1014, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Authentication.2.0.1014\lib\portable-net45+netcore45+wpa81\VisionHealth.Component.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Authentication.Core, Version=2.0.0.1014, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.AuthenticationUI.2.0.1014\lib\net45\VisionHealth.Component.Authentication.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Authentication.Wpf, Version=2.0.0.1014, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.AuthenticationUI.2.0.1014\lib\net45\VisionHealth.Component.Authentication.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.ClientDataCache, Version=2.0.0.30, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.ClientDataCache.2.0.30\lib\net45\VisionHealth.Component.ClientDataCache.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Diagnostics.Core, Version=2.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Diagnostics.2.0.10\lib\net45\VisionHealth.Component.Diagnostics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Diagnostics.Wpf, Version=2.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Diagnostics.2.0.10\lib\net45\VisionHealth.Component.Diagnostics.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.EndpointMonitor, Version=2.1.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.EndpointMonitor.2.1.22\lib\portable-net45+netcore45+wpa81\VisionHealth.Component.EndpointMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.FileSystem, Version=2.0.0.49, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.FileSystem.2.0.49\lib\net45\VisionHealth.Component.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.FileSystem.Net, Version=2.0.0.49, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.FileSystem.2.0.49\lib\net45\VisionHealth.Component.FileSystem.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.HttpInteractivity, Version=2.0.0.103, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.HttpInteractivity.2.0.103\lib\net45\VisionHealth.Component.HttpInteractivity.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.HttpInteractivity.Net, Version=2.0.0.103, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.HttpInteractivity.2.0.103\lib\net45\VisionHealth.Component.HttpInteractivity.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.KeyManagement, Version=2.0.1.1000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.KeyManagement.2.0.1000\lib\net45\VisionHealth.Component.KeyManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.KeyManagement.Net, Version=2.0.1.1000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.KeyManagement.2.0.1000\lib\net45\VisionHealth.Component.KeyManagement.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Logging, Version=2.0.0.41, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Logging.2.0.41\lib\net45\VisionHealth.Component.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Logging.Net, Version=2.0.0.41, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Logging.2.0.41\lib\net45\VisionHealth.Component.Logging.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.Scheduler, Version=2.0.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.Scheduler.2.0.12\lib\net45\VisionHealth.Component.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.UICommon, Version=2.0.0.194, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.UICommon.2.0.194\lib\net45\VisionHealth.Component.UICommon.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.UIThemes, Version=2.0.0.76, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.UIThemes.2.0.76\lib\net45\VisionHealth.Component.UIThemes.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.UserInteraction, Version=2.0.0.69, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.UserInteraction.2.0.69\lib\net45\VisionHealth.Component.UserInteraction.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Component.UserInteraction.UI, Version=2.0.0.69, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Component.UserInteraction.2.0.69\lib\net45\VisionHealth.Component.UserInteraction.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Core, Version=2.0.0.41, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Core.2.0.41\lib\net45\VisionHealth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionHealth.Core.VisionMvx, Version=2.0.0.39, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisionHealth.Core.VisionMvx.2.0.39\lib\net46\VisionHealth.Core.VisionMvx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="MockDispatcher.cs" />
+    <Compile Include="MockServcie.cs" />
+    <Compile Include="TestClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrossTest.Core\Core.csproj">
+      <Project>{40860195-3022-4c1e-9573-050dd48390b1}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.sqlcipher.linux.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.sqlcipher.linux.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.sqlcipher.osx.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.osx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.sqlcipher.osx.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.osx.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.sqlcipher.windows.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.sqlcipher.windows.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.windows.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.sqlcipher.linux.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.sqlcipher.linux.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.linux.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.sqlcipher.osx.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.osx.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.sqlcipher.osx.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.osx.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.sqlcipher.windows.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.windows.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.sqlcipher.windows.1.1.11\build\net35\SQLitePCLRaw.lib.sqlcipher.windows.targets')" />
+</Project>
